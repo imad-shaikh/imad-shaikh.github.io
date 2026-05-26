@@ -5,29 +5,16 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Profile</div>
-  </div>
-
-  <div class="mb-10 text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </div>
-
-  <div class="mb-5">
     <div class="text-3xl w-full font-bold">Education</div>
   </div>
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
-    <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
+      title="The Pennsylvania State University - Schreyer Honors College"
+      subtitle="University Park, PA | Bachelor of Science in Computer Engineering | Expected May 2028"
+    >
+      GPA: 3.87. Minors: Cybersecurity Computational Foundations and Mathematics. Dean's List: 5/5 semesters.
+    </TimeLineElement>
   </div>
 
   <div class="mb-5">
@@ -36,57 +23,45 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Amazon"
+      subtitle="Incoming Software Development Engineer Intern | Seattle, WA | Aug 2026 - Dec 2026"
+    />
+    <TimeLineElement
+      title="Poulta, Inc"
+      subtitle="Incoming Software Engineer Intern | Remote | Jun 2026 - Present"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      Optimizing a C-based computer vision pipeline on a Linux edge device running a regression-based ML model.
+      Developing agentic AI workflows that integrate computer vision and IoT signals for real-time monitoring.
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Handshake"
+      subtitle="Handshake AI Fellow | Remote | Mar 2026 - Present"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      Reimplemented software fixes across 50+ open-source repos using Docker and GitHub Actions validation workflows.
+      Built regression tests, targeted test runners, and AI evaluation prompts to verify bug fixes and prevent regressions.
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Phoenix Contact"
+      subtitle="Software Engineer Intern | Middletown, PA | Jun 2025 - Aug 2025"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      Developed embedded control software across 5+ microprocessor-based PLC systems used in industrial automation.
+      Implemented C++ utilities to monitor controller communication across 12+ devices and diagnose runtime faults.
+      Built a Python-based log analysis system to process 1,000+ runtime logs, reducing fault isolation time by about 50%.
     </TimeLineElement>
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
+    <div class="text-3xl w-full font-bold">Research</div>
   </div>
 
-  <ul class="list-disc mx-6 mb-10 grid gap-2">
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-  </ul>
-
-  <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Skills</div>
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="LLM Agent Security & Prompt Injection Defense"
+      subtitle="Team Lead | University Park, PA | Feb 2026 - Present"
+    >
+      Researching LLM agent security and prompt injection defense across 5+ tool-using agentic systems workflows.
+      Building agentic AI testbeds with LangGraph, OpenAI SDK, RAG pipelines, vector search, and adversarial datasets.
+      Simulating 100+ direct and indirect prompt injection attacks targeting retrieval, tool use, and instruction hierarchy.
+    </TimeLineElement>
   </div>
-
-  <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-  </ul>
 </BaseLayout>
