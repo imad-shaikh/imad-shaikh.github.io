@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="631" viewBox="0 0 1120 631">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="22" stdDeviation="22" flood-color="#000" flood-opacity=".18"/>
+    </filter>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#2877ff"/>
+    </marker>
+    <marker id="arrow-cyan" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#35d5d3"/>
+    </marker>
+    <style>
+      .title{font:400 40px Arial,Helvetica,sans-serif;fill:#202124}
+      .label{font:400 21px Arial,Helvetica,sans-serif;fill:#171717}
+      .blue{stroke:#0b83ff;marker-end:url(#arrow-blue)}
+      .cyan{stroke:#35d5d3;marker-end:url(#arrow-cyan)}
+      .link{stroke-width:1.4;opacity:.95}
+    </style>
+  </defs>
+  <rect width="1120" height="631" fill="#f8f8f8"/>
+  <rect x="115" y="36" width="890" height="535" rx="4" fill="#fff" filter="url(#shadow)"/>
+  <text x="162" y="115" class="title">Deep neural network</text>
+  <text x="164" y="170" class="label">Input layer</text>
+  <text x="450" y="170" class="label">Multiple hidden layer</text>
+  <text x="812" y="170" class="label">Output layer</text>
+
+  <g class="link">
+    <path class="blue" d="M229 225 332 225M229 225 332 295M229 225 332 365M229 225 332 435M229 225 332 505M229 295 332 225M229 295 332 365M229 295 332 435M229 365 332 225M229 365 332 295M229 365 332 365M229 365 332 435M229 505 332 225M229 505 332 295M229 505 332 365M229 505 332 505M229 435 332 225M229 435 332 295M229 435 332 435M229 435 332 505"/>
+    <path class="cyan" d="M414 225 512 225M414 225 512 295M414 225 512 365M414 225 512 435M414 295 512 225M414 295 512 365M414 295 512 505M414 365 512 225M414 365 512 295M414 365 512 365M414 365 512 435M414 435 512 225M414 435 512 295M414 435 512 365M414 435 512 505M414 505 512 225M414 505 512 365M414 505 512 435M414 505 512 505"/>
+    <path class="cyan" d="M594 225 694 225M594 225 694 295M594 225 694 365M594 225 694 435M594 295 694 225M594 295 694 295M594 295 694 435M594 295 694 505M594 365 694 225M594 365 694 295M594 365 694 365M594 365 694 435M594 435 694 225M594 435 694 365M594 435 694 435M594 435 694 505M594 505 694 225M594 505 694 295M594 505 694 435M594 505 694 505"/>
+    <path class="blue" d="M776 225 875 295M776 225 875 365M776 225 875 435M776 295 875 295M776 295 875 365M776 295 875 435M776 365 875 295M776 365 875 365M776 365 875 435M776 435 875 295M776 435 875 365M776 435 875 435M776 505 875 295M776 505 875 365M776 505 875 435"/>
+  </g>
+
+  <g fill="#0b63f6">
+    <circle cx="193" cy="225" r="28"/><circle cx="193" cy="295" r="28"/><circle cx="193" cy="365" r="28"/><circle cx="193" cy="435" r="28"/><circle cx="193" cy="505" r="28"/>
+  </g>
+  <g fill="#38cfd0">
+    <circle cx="380" cy="225" r="28"/><circle cx="380" cy="295" r="28"/><circle cx="380" cy="365" r="28"/><circle cx="380" cy="435" r="28"/><circle cx="380" cy="505" r="28"/>
+    <circle cx="560" cy="225" r="28"/><circle cx="560" cy="295" r="28"/><circle cx="560" cy="365" r="28"/><circle cx="560" cy="435" r="28"/><circle cx="560" cy="505" r="28"/>
+    <circle cx="742" cy="225" r="28"/><circle cx="742" cy="295" r="28"/><circle cx="742" cy="365" r="28"/><circle cx="742" cy="435" r="28"/><circle cx="742" cy="505" r="28"/>
+  </g>
+  <g fill="#6f9ff5">
+    <circle cx="922" cy="295" r="28"/><circle cx="922" cy="365" r="28"/><circle cx="922" cy="435" r="28"/>
+  </g>
+</svg>
