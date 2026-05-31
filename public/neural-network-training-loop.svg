@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="930" viewBox="0 0 1680 930">
+  <defs>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L14,7 L0,14 Z" fill="#3b3f46"/>
+    </marker>
+    <style>
+      .title{font:700 45px Arial,Helvetica,sans-serif;fill:#080922}
+      .subtitle{font:400 italic 31px Arial,Helvetica,sans-serif;fill:#202238}
+      .card-title{font:700 26px Arial,Helvetica,sans-serif}
+      .body{font:400 italic 23px Arial,Helvetica,sans-serif;fill:#0d1029}
+      .small{font:700 23px Arial,Helvetica,sans-serif;fill:#111322}
+      .eq{font:400 italic 26px Georgia,serif;fill:#111322}
+      .arrow{stroke:#3b3f46;stroke-width:6;fill:none;marker-end:url(#arrow)}
+      .loop{stroke:#3b3f46;stroke-width:6;fill:none;stroke-linecap:round;marker-end:url(#arrow)}
+      .dash{stroke:#3b3f46;stroke-width:5;fill:none;stroke-linecap:round;stroke-dasharray:15 18;marker-end:url(#arrow)}
+      .net-line{stroke-width:3;fill:none;stroke-linecap:round}
+    </style>
+  </defs>
+  <rect width="1680" height="930" fill="#fbfbfa"/>
+  <text x="840" y="60" text-anchor="middle" class="title">The Neural Network Training Loop</text>
+  <text x="840" y="122" text-anchor="middle" class="subtitle">The model improves by repeatedly going through this cycle.</text>
+
+  <rect x="26" y="202" width="272" height="327" rx="22" fill="#f5fbf8" stroke="#087d4b" stroke-width="2.5"/>
+  <text x="162" y="256" text-anchor="middle" class="card-title" fill="#087d4b">1. Input Data</text>
+  <text x="162" y="300" text-anchor="middle" class="body">A batch of training</text>
+  <text x="162" y="335" text-anchor="middle" class="body">data is fed into</text>
+  <text x="162" y="370" text-anchor="middle" class="body">the network.</text>
+  <g fill="none" stroke="#087d4b" stroke-width="2.4">
+    <rect x="93" y="416" width="125" height="71" rx="5"/>
+    <rect x="107" y="430" width="125" height="71" rx="5"/>
+    <rect x="121" y="444" width="125" height="71" rx="5"/>
+  </g>
+
+  <path class="arrow" d="M298 340 H376"/>
+
+  <rect x="384" y="202" width="360" height="327" rx="22" fill="#f7faff" stroke="#0743a4" stroke-width="2.5"/>
+  <text x="564" y="250" text-anchor="middle" class="card-title" fill="#0743a4">2. Forward Pass</text>
+  <text x="564" y="294" text-anchor="middle" class="body">The network processes</text>
+  <text x="564" y="327" text-anchor="middle" class="body">the input and produces</text>
+  <text x="564" y="360" text-anchor="middle" class="body">a prediction.</text>
+  <g stroke="#0b4cab" stroke-width="2">
+    <path d="M440 410 L544 410 L655 428 M440 450 L544 410 L655 470 M440 490 L544 450 L655 428 M440 410 L544 450 L655 470 M440 450 L544 490 L655 428 M440 490 L544 490 L655 470" fill="none"/>
+  </g>
+  <g>
+    <circle cx="440" cy="410" r="11" fill="#9ec5ff" stroke="#0644a3" stroke-width="2"/>
+    <circle cx="440" cy="450" r="11" fill="#9ec5ff" stroke="#0644a3" stroke-width="2"/>
+    <circle cx="440" cy="490" r="11" fill="#9ec5ff" stroke="#0644a3" stroke-width="2"/>
+    <circle cx="544" cy="410" r="11" fill="#9ba4b4" stroke="#26314a" stroke-width="2"/>
+    <circle cx="544" cy="450" r="11" fill="#9ba4b4" stroke="#26314a" stroke-width="2"/>
+    <circle cx="544" cy="490" r="11" fill="#9ba4b4" stroke="#26314a" stroke-width="2"/>
+    <circle cx="655" cy="428" r="11" fill="#9ec5ff" stroke="#0644a3" stroke-width="2"/>
+    <circle cx="655" cy="470" r="11" fill="#9ec5ff" stroke="#0644a3" stroke-width="2"/>
+  </g>
+  <path d="M678 458 H710" stroke="#0743a4" stroke-width="3" marker-end="url(#arrow)" fill="none"/>
+
+  <path class="arrow" d="M744 340 H837"/>
+
+  <rect x="853" y="202" width="327" height="327" rx="22" fill="#fffaf6" stroke="#f09254" stroke-width="2.5"/>
+  <text x="1017" y="250" text-anchor="middle" class="card-title" fill="#e95b17">3. Compute Loss</text>
+  <text x="1017" y="297" text-anchor="middle" class="body">The prediction is</text>
+  <text x="1017" y="330" text-anchor="middle" class="body">compared to the true</text>
+  <text x="1017" y="363" text-anchor="middle" class="body">target to calculate</text>
+  <text x="1017" y="396" text-anchor="middle" class="body">the loss (error).</text>
+  <g fill="none" stroke="#ef5a45" stroke-width="5">
+    <circle cx="943" cy="466" r="31"/>
+    <circle cx="943" cy="466" r="17"/>
+    <circle cx="943" cy="466" r="4" fill="#ef5a45"/>
+    <path d="M943 466 L985 424"/>
+    <path d="M971 438 L989 438 L989 420"/>
+  </g>
+  <text x="1032" y="477" text-anchor="middle" class="card-title" fill="#df3d15">-</text>
+  <g fill="none" stroke="#d75924" stroke-width="2.4">
+    <rect x="1085" y="416" width="31" height="97" rx="5"/>
+    <circle cx="1101" cy="432" r="8"/>
+    <circle cx="1101" cy="455" r="8"/>
+    <circle cx="1101" cy="478" r="8"/>
+    <circle cx="1101" cy="501" r="8"/>
+  </g>
+
+  <path class="arrow" d="M1180 340 H1288"/>
+
+  <rect x="1300" y="202" width="363" height="401" rx="22" fill="#fbf8ff" stroke="#6f35b6" stroke-width="2.5"/>
+  <text x="1482" y="250" text-anchor="middle" class="card-title" fill="#6f35b6">4. Backpropagation</text>
+  <text x="1482" y="297" text-anchor="middle" class="body">The error is propagated</text>
+  <text x="1482" y="330" text-anchor="middle" class="body">backward through the</text>
+  <text x="1482" y="363" text-anchor="middle" class="body">network to compute</text>
+  <text x="1482" y="396" text-anchor="middle" class="body">gradients for every</text>
+  <text x="1482" y="429" text-anchor="middle" class="body">weight and bias.</text>
+  <g stroke="#7a3fc5" stroke-width="2">
+    <path d="M1348 478 L1468 478 L1596 496 M1348 520 L1468 478 L1596 544 M1348 562 L1468 520 L1596 496 M1348 478 L1468 520 L1596 544 M1348 520 L1468 562 L1596 496 M1348 562 L1468 562 L1596 544" fill="none"/>
+  </g>
+  <g>
+    <circle cx="1348" cy="478" r="11" fill="#c3a0ff" stroke="#6f35b6" stroke-width="2"/>
+    <circle cx="1348" cy="520" r="11" fill="#c3a0ff" stroke="#6f35b6" stroke-width="2"/>
+    <circle cx="1348" cy="562" r="11" fill="#c3a0ff" stroke="#6f35b6" stroke-width="2"/>
+    <circle cx="1468" cy="478" r="11" fill="#9ba4b4" stroke="#31374c" stroke-width="2"/>
+    <circle cx="1468" cy="520" r="11" fill="#9ba4b4" stroke="#31374c" stroke-width="2"/>
+    <circle cx="1468" cy="562" r="11" fill="#9ba4b4" stroke="#31374c" stroke-width="2"/>
+    <circle cx="1596" cy="496" r="11" fill="#c3a0ff" stroke="#6f35b6" stroke-width="2"/>
+    <circle cx="1596" cy="544" r="11" fill="#c3a0ff" stroke="#6f35b6" stroke-width="2"/>
+  </g>
+
+  <path class="loop" d="M1444 604 V764 Q1444 797 1408 797 H993"/>
+
+  <rect x="657" y="562" width="276" height="102" rx="10" fill="#f7f7f7" stroke="#696b70" stroke-width="2"/>
+  <text x="795" y="598" text-anchor="middle" class="small">Model Parameters</text>
+  <text x="795" y="624" text-anchor="middle" class="small">(weights and biases)</text>
+  <g fill="#6c6f76">
+    <circle cx="745" cy="643" r="4"/>
+    <circle cx="770" cy="643" r="4"/>
+    <circle cx="795" cy="643" r="4"/>
+    <circle cx="820" cy="643" r="4"/>
+    <circle cx="845" cy="643" r="4"/>
+  </g>
+  <path class="arrow" d="M795 664 V690"/>
+
+  <rect x="617" y="697" width="360" height="216" rx="18" fill="#fffdf5" stroke="#e8a10f" stroke-width="2.5"/>
+  <text x="797" y="740" text-anchor="middle" class="card-title" fill="#e8a10f">5. Update Parameters</text>
+  <text x="797" y="776" text-anchor="middle" class="body" style="font-style:normal">Weights and biases are</text>
+  <text x="797" y="806" text-anchor="middle" class="body" style="font-style:normal">updated using the gradients</text>
+  <text x="797" y="836" text-anchor="middle" class="body" style="font-style:normal">and the learning rate.</text>
+  <rect x="666" y="846" width="256" height="49" rx="5" fill="#fff8e7" stroke="#f0cc79" stroke-width="1.5"/>
+  <text x="794" y="879" text-anchor="middle" class="eq">theta_new = theta_old - eta nabla L</text>
+
+  <path class="dash" d="M489 794 Q489 822 521 822 H617"/>
+  <path class="dash" d="M489 794 V531"/>
+  <text x="196" y="702" text-anchor="middle" class="body">Repeat for many</text>
+  <text x="196" y="737" text-anchor="middle" class="body">batches and epochs</text>
+  <text x="196" y="772" text-anchor="middle" class="body">until the model</text>
+  <text x="196" y="807" text-anchor="middle" class="body">converges.</text>
+</svg>
