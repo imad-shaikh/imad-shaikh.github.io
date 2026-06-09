@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Backpropagation Simplified</title>
+  <desc id="desc">A diagram showing neural network forward pass, backward pass, prediction error, loss, credit assignment, weight updates, repeated training, and a learned model.</desc>
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="75%">
+      <stop offset="0%" stop-color="#0b1f35"/>
+      <stop offset="58%" stop-color="#061422"/>
+      <stop offset="100%" stop-color="#020811"/>
+    </radialGradient>
+    <linearGradient id="blue" x1="0" x2="1">
+      <stop stop-color="#1d77c7"/>
+      <stop offset="1" stop-color="#20a7ff"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" x2="1">
+      <stop stop-color="#34b965"/>
+      <stop offset="1" stop-color="#74df82"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" x2="1">
+      <stop stop-color="#7f44d7"/>
+      <stop offset="1" stop-color="#bd6dff"/>
+    </linearGradient>
+    <linearGradient id="redArrow" x1="0" x2="1">
+      <stop stop-color="#ff4661"/>
+      <stop offset="1" stop-color="#ff4661" stop-opacity=".25"/>
+    </linearGradient>
+    <linearGradient id="blueArrow" x1="0" x2="1">
+      <stop stop-color="#0d4d83" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#24aaff"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#27aaff"/>
+    </marker>
+    <marker id="arrowRed" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#ff4661"/>
+    </marker>
+    <marker id="arrowDim" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 10 5 0 10z" fill="#7589a2" opacity=".7"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <text x="800" y="78" text-anchor="middle" fill="#f7f7f7" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="800" letter-spacing="3">BACKPROPAGATION SIMPLIFIED</text>
+  <text x="800" y="130" text-anchor="middle" fill="#cfd5dd" font-family="Arial, Helvetica, sans-serif" font-size="36">How neural networks learn from their mistakes</text>
+
+  <rect x="30" y="156" width="286" height="486" rx="10" fill="#07111d" stroke="#21aaff" stroke-width="2"/>
+  <text x="62" y="206" fill="#28a5ff" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">1. FORWARD PASS</text>
+  <text x="62" y="244" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="24">
+    <tspan x="62">Input moves through</tspan><tspan x="62" dy="30">the network to</tspan><tspan x="62" dy="30">make a prediction.</tspan>
+  </text>
+  <rect x="80" y="382" width="140" height="140" fill="#0b1522" stroke="#fff" stroke-width="2"/>
+  <text x="150" y="470" text-anchor="middle" fill="#fff" font-family="Georgia, serif" font-size="88" font-style="italic">4</text>
+  <path d="M236 446h118" stroke="url(#blueArrow)" stroke-width="20" marker-end="url(#arrowBlue)"/>
+  <text x="150" y="560" text-anchor="middle" fill="#28a5ff" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700">INPUT</text>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="23" fill="#fff">
+    <text x="410" y="238" text-anchor="middle">INPUT<tspan x="410" dy="30">LAYER</tspan></text>
+    <text x="590" y="238" text-anchor="middle">HIDDEN<tspan x="590" dy="30">LAYER 1</tspan></text>
+    <text x="775" y="238" text-anchor="middle">HIDDEN<tspan x="775" dy="30">LAYER 2</tspan></text>
+    <text x="955" y="238" text-anchor="middle">OUTPUT<tspan x="955" dy="30">LAYER</tspan></text>
+  </g>
+
+  <g stroke="#f5f5f5" stroke-width="1.4" opacity=".9">
+    <g id="connections">
+      <path d="M410 310 590 310M410 310 590 385M410 310 590 460M410 310 590 535M410 385 590 310M410 385 590 385M410 385 590 460M410 385 590 535M410 460 590 310M410 460 590 385M410 460 590 460M410 460 590 535M410 535 590 310M410 535 590 385M410 535 590 460M410 535 590 535"/>
+      <path d="M590 310 775 310M590 310 775 385M590 310 775 460M590 310 775 535M590 385 775 310M590 385 775 385M590 385 775 460M590 385 775 535M590 460 775 310M590 460 775 385M590 460 775 460M590 460 775 535M590 535 775 310M590 535 775 385M590 535 775 460M590 535 775 535"/>
+      <path d="M775 310 955 310M775 310 955 385M775 310 955 460M775 310 955 535M775 385 955 310M775 385 955 385M775 385 955 460M775 385 955 535M775 460 955 310M775 460 955 385M775 460 955 460M775 460 955 535M775 535 955 310M775 535 955 385M775 535 955 460M775 535 955 535"/>
+    </g>
+  </g>
+  <g stroke="#e9f8ff" stroke-width="2">
+    <circle cx="410" cy="310" r="30" fill="url(#blue)" filter="url(#glow)"/><circle cx="410" cy="385" r="30" fill="url(#blue)" filter="url(#glow)"/><circle cx="410" cy="460" r="30" fill="url(#blue)" filter="url(#glow)"/><circle cx="410" cy="535" r="30" fill="url(#blue)" filter="url(#glow)"/>
+    <circle cx="590" cy="310" r="30" fill="url(#green)" filter="url(#glow)"/><circle cx="590" cy="385" r="30" fill="url(#green)" filter="url(#glow)"/><circle cx="590" cy="460" r="30" fill="url(#green)" filter="url(#glow)"/><circle cx="590" cy="535" r="30" fill="url(#green)" filter="url(#glow)"/>
+    <circle cx="775" cy="310" r="30" fill="url(#green)" filter="url(#glow)"/><circle cx="775" cy="385" r="30" fill="url(#green)" filter="url(#glow)"/><circle cx="775" cy="460" r="30" fill="url(#green)" filter="url(#glow)"/><circle cx="775" cy="535" r="30" fill="url(#green)" filter="url(#glow)"/>
+    <circle cx="955" cy="310" r="30" fill="url(#purple)" filter="url(#glow)"/><circle cx="955" cy="385" r="30" fill="url(#purple)" filter="url(#glow)"/><circle cx="955" cy="460" r="30" fill="url(#purple)" filter="url(#glow)"/><circle cx="955" cy="535" r="30" fill="url(#purple)" filter="url(#glow)"/>
+  </g>
+  <path d="M368 196C545 154 922 158 1130 220" fill="none" stroke="url(#redArrow)" stroke-width="16" marker-start="url(#arrowRed)"/>
+  <path d="M365 604h560" stroke="url(#blueArrow)" stroke-width="16" marker-end="url(#arrowBlue)"/>
+  <text x="690" y="610" text-anchor="middle" fill="#28a5ff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">FORWARD PASS</text>
+  <path d="M925 660H360" stroke="url(#redArrow)" stroke-width="16" marker-end="url(#arrowRed)"/>
+  <text x="700" y="668" text-anchor="middle" fill="#ff4661" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">BACKWARD PASS</text>
+
+  <text x="1130" y="186" fill="#ff5268" font-family="Arial, Helvetica, sans-serif" font-size="27" font-weight="700">2. BACKWARD PASS</text>
+  <text x="1132" y="220" fill="#fff" font-family="Arial, Helvetica, sans-serif" font-size="23">
+    <tspan x="1132">The error is sent backward to</tspan><tspan x="1132" dy="29">find out which connections</tspan><tspan x="1132" dy="29">caused the mistake.</tspan>
+  </text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="21">
+    <text x="1088" y="325" fill="#bd6dff" font-weight="700">PREDICTION</text>
+    <text x="1300" y="325" fill="#ffc229" font-weight="700">TARGET</text>
+    <rect x="1088" y="335" width="116" height="316" rx="10" fill="#091321" stroke="#fff" stroke-width="1.5"/>
+    <rect x="1286" y="335" width="98" height="316" rx="10" fill="#091321" stroke="#fff" stroke-width="1.5"/>
+    <rect x="1090" y="461" width="112" height="31" fill="#a46aff" opacity=".9"/>
+    <rect x="1288" y="461" width="94" height="31" fill="#ffc229" opacity=".95"/>
+    <g fill="#fff">
+      <text x="1105" y="365">0</text><text x="1145" y="365">0.02</text><text x="1305" y="365">0</text><text x="1350" y="365">0</text>
+      <text x="1105" y="395">1</text><text x="1145" y="395">0.01</text><text x="1305" y="395">1</text><text x="1350" y="395">0</text>
+      <text x="1105" y="425">2</text><text x="1145" y="425">0.05</text><text x="1305" y="425">2</text><text x="1350" y="425">0</text>
+      <text x="1105" y="455">3</text><text x="1145" y="455">0.10</text><text x="1305" y="455">3</text><text x="1350" y="455">0</text>
+      <text x="1105" y="485" fill="#061422">4</text><text x="1145" y="485" fill="#061422">0.70</text><text x="1305" y="485" fill="#061422">4</text><text x="1350" y="485" fill="#061422">1</text>
+      <text x="1105" y="515">5</text><text x="1145" y="515">0.04</text><text x="1305" y="515">5</text><text x="1350" y="515">0</text>
+      <text x="1105" y="545">6</text><text x="1145" y="545">0.02</text><text x="1305" y="545">6</text><text x="1350" y="545">0</text>
+      <text x="1105" y="575">7</text><text x="1145" y="575">0.01</text><text x="1305" y="575">7</text><text x="1350" y="575">0</text>
+      <text x="1105" y="605">8</text><text x="1145" y="605">0.02</text><text x="1305" y="605">8</text><text x="1350" y="605">0</text>
+      <text x="1105" y="635">9</text><text x="1145" y="635">0.03</text><text x="1305" y="635">9</text><text x="1350" y="635">0</text>
+    </g>
+    <text x="1234" y="478" fill="#fff" font-size="34" font-weight="700">-</text>
+    <text x="1405" y="478" fill="#fff" font-size="34" font-weight="700">=</text>
+    <rect x="1448" y="405" width="130" height="166" rx="9" fill="#08101b" stroke="#ff5268" stroke-width="2"/>
+    <text x="1513" y="443" text-anchor="middle" fill="#ff5268" font-weight="700" font-size="26">LOSS</text>
+    <text x="1513" y="476" text-anchor="middle" fill="#fff">How wrong</text>
+    <text x="1513" y="506" text-anchor="middle" fill="#fff">we are.</text>
+    <text x="1513" y="548" text-anchor="middle" fill="#ff5268" font-weight="800" font-size="38">0.30</text>
+  </g>
+
+  <rect x="82" y="704" width="1430" height="322" rx="10" fill="#0a1625" stroke="#66809e" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="138" y="755" fill="#5bdb74" font-size="26" font-weight="700">3. ASSIGN CREDIT</text>
+    <text x="138" y="790" fill="#fff" font-size="23"><tspan x="138">Each weight and bias</tspan><tspan x="138" dy="28">gets credit or blame</tspan><tspan x="138" dy="28">for contributing to</tspan><tspan x="138" dy="28">the error.</tspan></text>
+    <circle cx="154" cy="916" r="18" fill="url(#green)" stroke="#fff"/><circle cx="242" cy="916" r="18" fill="url(#green)" stroke="#fff"/><circle cx="332" cy="878" r="18" fill="url(#green)" stroke="#fff"/><circle cx="332" cy="954" r="18" fill="url(#green)" stroke="#fff"/>
+    <path d="M172 916h52M260 910l54-24M260 922l54 24M242 934l38 58" stroke="#fff" stroke-width="2" fill="none"/>
+    <path d="M384 806h60" stroke="#7589a2" stroke-width="18" marker-end="url(#arrowDim)"/>
+
+    <text x="483" y="755" fill="#ffc229" font-size="26" font-weight="700">4. UPDATE WEIGHTS<tspan x="515" dy="30">AND BIASES</tspan></text>
+    <text x="488" y="817" fill="#fff" font-size="23"><tspan x="488">Weights and biases</tspan><tspan x="488" dy="28">are nudged in a</tspan><tspan x="488" dy="28">direction that should</tspan><tspan x="488" dy="28">reduce the error.</tspan></text>
+    <circle cx="510" cy="952" r="20" fill="#ffb51f" stroke="#fff"/><path d="M535 952h90" stroke="#fff" stroke-width="4" marker-end="url(#arrowDim)"/><circle cx="666" cy="952" r="20" fill="#ffb51f" stroke="#fff" stroke-dasharray="6 6"/><text x="558" y="998" fill="#fff" font-size="20">+ &#916;w</text>
+    <path d="M780 806h60" stroke="#7589a2" stroke-width="18" marker-end="url(#arrowDim)"/>
+
+    <text x="894" y="755" fill="#28a5ff" font-size="26" font-weight="700">5. REPEAT</text>
+    <text x="880" y="790" fill="#fff" font-size="23"><tspan x="880">Do this for many</tspan><tspan x="880" dy="28">examples in mini-</tspan><tspan x="880" dy="28">batches until the</tspan><tspan x="880" dy="28">error is low.</tspan></text>
+    <path d="M930 926a48 48 0 0 1 74-40" fill="none" stroke="#28a5ff" stroke-width="14" marker-end="url(#arrowBlue)"/><path d="M1008 934a48 48 0 0 1-78 44" fill="none" stroke="#28a5ff" stroke-width="14" marker-end="url(#arrowBlue)"/>
+    <path d="M1118 806h60" stroke="#7589a2" stroke-width="18" marker-end="url(#arrowDim)"/>
+
+    <text x="1210" y="755" fill="#bd6dff" font-size="26" font-weight="700">6. LEARNED MODEL</text>
+    <text x="1216" y="790" fill="#fff" font-size="23"><tspan x="1216">Over time, the network</tspan><tspan x="1216" dy="28">gets better at making</tspan><tspan x="1216" dy="28">accurate predictions.</tspan></text>
+    <path d="M1284 938c-30 4-42-33-15-48-2-27 33-42 53-22 18-21 56-5 55 23 34 8 31 57-4 58-8 25-47 28-62 7-12 12-21 7-27-18z" fill="#a46aff" stroke="#c995ff" stroke-width="4"/>
+    <path d="M1305 880c-8 18 8 27 20 22m37-23c-18 5-19 20-6 30m-66 31c20-16 37 8 31 26m42-38c-18-14-39 7-28 26" stroke="#20113d" stroke-width="3" fill="none"/>
+  </g>
+</svg>
