@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Networking Basics</title>
+  <desc id="desc">A diagram showing a device sending data through a router and the internet to a web server and website, with return arrows below.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f7f9fb"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef5ff"/>
+      <stop offset="1" stop-color="#dfeaf7"/>
+    </linearGradient>
+    <linearGradient id="server" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a4453"/>
+      <stop offset="1" stop-color="#242b35"/>
+    </linearGradient>
+    <linearGradient id="cloud" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f8fe"/>
+      <stop offset="1" stop-color="#e7eef8"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#395b83"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #111827; }
+      .label { font-size: 34px; font-weight: 700; }
+      .sub { font-size: 22px; fill: #4b5563; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <g stroke="#395b83" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M332 455h62" marker-end="url(#arrow)"/>
+    <path d="M630 455h60" marker-end="url(#arrow)"/>
+    <path d="M968 455h62" marker-end="url(#arrow)"/>
+    <path d="M1320 455h60" marker-end="url(#arrow)"/>
+    <path d="M1340 620h-170"/>
+    <path d="M1042 620H882"/>
+    <path d="M680 620H520"/>
+    <path d="M320 620H160"/>
+    <path d="M160 620h-24" marker-end="url(#arrow)"/>
+    <path d="M520 620h-24" marker-end="url(#arrow)"/>
+    <path d="M882 620h-24" marker-end="url(#arrow)"/>
+    <path d="M1220 620h-24" marker-end="url(#arrow)"/>
+  </g>
+
+  <text x="190" y="318" text-anchor="middle" class="label">Your Device</text>
+  <text x="500" y="318" text-anchor="middle" class="label">Router</text>
+  <text x="800" y="318" text-anchor="middle" class="label">Internet</text>
+  <text x="1140" y="318" text-anchor="middle" class="label">Web Server</text>
+  <text x="1440" y="318" text-anchor="middle" class="label">Website</text>
+
+  <g transform="translate(70 375)">
+    <rect x="0" y="0" width="240" height="170" rx="14" fill="#3e4a59"/>
+    <rect x="18" y="16" width="204" height="128" rx="8" fill="url(#screen)"/>
+    <circle cx="120" cy="80" r="40" fill="none" stroke="#4b8fe6" stroke-width="6"/>
+    <circle cx="120" cy="80" r="12" fill="none" stroke="#4b8fe6" stroke-width="6"/>
+    <path d="M80 80h80M120 40c18 18 18 62 0 80M120 40c-18 18-18 62 0 80" stroke="#4b8fe6" stroke-width="6"/>
+    <rect x="18" y="142" width="204" height="18" rx="9" fill="#6b7280"/>
+  </g>
+
+  <g transform="translate(385 355)">
+    <rect x="0" y="90" width="230" height="80" rx="12" fill="#2f3743" stroke="#1f2937" stroke-width="5"/>
+    <rect x="24" y="28" width="14" height="100" rx="7" fill="#2f3743"/>
+    <rect x="192" y="28" width="14" height="100" rx="7" fill="#2f3743"/>
+    <path d="M74 40c24-22 58-22 82 0" stroke="#4b8fe6" stroke-width="6"/>
+    <path d="M92 58c14-12 32-12 46 0" stroke="#4b8fe6" stroke-width="6"/>
+    <path d="M110 76c5-4 9-4 14 0" stroke="#4b8fe6" stroke-width="6"/>
+    <circle cx="54" cy="148" r="6" fill="#8bd34a"/>
+    <circle cx="178" cy="148" r="6" fill="#8bd34a"/>
+    <circle cx="202" cy="148" r="6" fill="#8bd34a"/>
+  </g>
+
+  <g transform="translate(695 346)">
+    <path d="M105 70c8-35 43-62 86-62 52 0 94 40 94 90 0 8-1 16-3 24 29 3 52 28 52 58 0 34-27 61-61 61H67c-37 0-67-30-67-67 0-29 19-54 46-63 8-24 31-41 59-41z" fill="url(#cloud)" stroke="#a9bfd7" stroke-width="4"/>
+    <text x="175" y="148" text-anchor="middle" font-size="42" font-weight="700">Internet</text>
+  </g>
+
+  <g transform="translate(1085 348)">
+    <rect x="0" y="0" width="170" height="180" rx="12" fill="url(#server)" stroke="#1f2937" stroke-width="5"/>
+    <rect x="18" y="16" width="134" height="40" rx="8" fill="#384150"/>
+    <rect x="18" y="66" width="134" height="40" rx="8" fill="#384150"/>
+    <rect x="18" y="116" width="134" height="46" rx="8" fill="#384150"/>
+    <circle cx="138" cy="34" r="7" fill="#87d24d"/>
+    <circle cx="138" cy="84" r="7" fill="#87d24d"/>
+    <circle cx="138" cy="138" r="7" fill="#87d24d"/>
+    <circle cx="126" cy="136" r="16" fill="#111827"/>
+    <circle cx="126" cy="136" r="8" fill="#5b6471"/>
+    <rect x="30" y="31" width="52" height="8" rx="4" fill="#1f2937"/>
+    <rect x="30" y="81" width="52" height="8" rx="4" fill="#1f2937"/>
+  </g>
+
+  <g transform="translate(1380 345)">
+    <rect x="0" y="0" width="170" height="190" rx="12" fill="#ffffff" stroke="#9aa7b8" stroke-width="4"/>
+    <rect x="0" y="0" width="170" height="34" rx="12" fill="#4d627b"/>
+    <circle cx="18" cy="17" r="5" fill="#ffffff"/>
+    <circle cx="34" cy="17" r="5" fill="#ffffff"/>
+    <circle cx="50" cy="17" r="5" fill="#ffffff"/>
+    <rect x="22" y="56" width="72" height="68" rx="6" fill="#5c92d5"/>
+    <rect x="105" y="58" width="42" height="10" rx="5" fill="#c5ccd6"/>
+    <rect x="105" y="78" width="42" height="10" rx="5" fill="#c5ccd6"/>
+    <rect x="105" y="98" width="42" height="10" rx="5" fill="#c5ccd6"/>
+    <rect x="22" y="134" width="68" height="10" rx="5" fill="#d1d7df"/>
+    <rect x="22" y="152" width="96" height="10" rx="5" fill="#d1d7df"/>
+    <rect x="112" y="134" width="38" height="38" rx="6" fill="#cfd5dd"/>
+  </g>
+</svg>
