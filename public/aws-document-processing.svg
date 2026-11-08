@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" role="img" aria-labelledby="title desc">
+<title id="title">AI document processing on AWS</title><desc id="desc">User sends requests to API Gateway and Lambda or ECS backend. Backend writes to S3 and DynamoDB, publishes to SNS and SQS for Lambda processing and Bedrock summarization. AI agent invokes approved tools through AgentCore Gateway.</desc>
+<rect width="1200" height="680" fill="#f8fafc"/>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#1e293b}.head{font-size:26px;font-weight:700}.sub{font-size:15px;fill:#64748b}.node{stroke:#cbd5e1;stroke-width:2;fill:#fff}.primary{fill:#fff6e8;stroke:#e4a54c}.secondary{fill:#eff6ff;stroke:#88b7eb}.t{font-size:17px;font-weight:700;text-anchor:middle}.s{font-size:13px;fill:#64748b;text-anchor:middle}.arrow{fill:none;stroke:#64748b;stroke-width:2.5;marker-end:url(#arr)}</style>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10Z" fill="#64748b"/></marker></defs>
+<text class="head" x="55" y="58">AI Document Processing — Example AWS Architecture</text><text class="sub" x="55" y="88">Simplified request, storage, messaging, and AI processing paths</text>
+<path class="arrow" d="M220 212 H280"/><path class="arrow" d="M472 212 H540"/><path class="arrow" d="M750 198 H805 V157 H860"/><path class="arrow" d="M750 228 H805 V268 H860"/><path class="arrow" d="M640 256 V345"/><path class="arrow" d="M640 434 V488"/><path class="arrow" d="M735 530 H785"/><path class="arrow" d="M972 530 H1000 V379 H975 V306"/><path class="arrow" d="M470 212 H497 V606 H540"/>
+<rect class="node" x="55" y="174" width="165" height="78" rx="12"/><text class="t" x="137" y="206">User</text><text class="s" x="137" y="228">Frontend</text>
+<rect class="node primary" x="280" y="174" width="192" height="78" rx="12"/><text class="t" x="376" y="206">API Gateway</text><text class="s" x="376" y="228">HTTP requests</text>
+<rect class="node primary" x="540" y="174" width="210" height="78" rx="12"/><text class="t" x="645" y="205">Lambda / ECS</text><text class="s" x="645" y="228">Backend</text>
+<rect class="node secondary" x="860" y="117" width="265" height="78" rx="12"/><text class="t" x="992" y="151">S3</text><text class="s" x="992" y="173">Uploaded documents</text>
+<rect class="node secondary" x="860" y="229" width="265" height="78" rx="12"/><text class="t" x="992" y="263">DynamoDB</text><text class="s" x="992" y="285">Metadata &amp; processing state</text>
+<rect class="node primary" x="540" y="345" width="210" height="89" rx="12"/><text class="t" x="645" y="380">SNS</text><text class="s" x="645" y="403">Document uploaded</text>
+<rect class="node primary" x="540" y="488" width="210" height="85" rx="12"/><text class="t" x="645" y="522">SQS</text><text class="s" x="645" y="545">Processing queue</text>
+<rect class="node primary" x="785" y="488" width="187" height="85" rx="12"/><text class="t" x="879" y="522">Lambda Worker</text><text class="s" x="879" y="545">Extracts document text</text>
+<rect class="node secondary" x="1010" y="488" width="145" height="85" rx="12"/><text class="t" x="1082" y="522">Bedrock</text><text class="s" x="1082" y="545">AI summary</text>
+<rect class="node" x="540" y="602" width="260" height="52" rx="12"/><text class="t" x="670" y="624">AI Agent</text><text class="s" x="670" y="642">Via AgentCore Gateway tools</text>
+<text class="sub" x="55" y="655">Cross-cutting: IAM · Secrets Manager · CloudWatch · CDK</text>
+</svg>
