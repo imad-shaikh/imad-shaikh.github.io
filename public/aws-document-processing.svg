@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="740" viewBox="0 0 1200 740" role="img" aria-labelledby="title desc">
+<title id="title">AWS architecture for an AI document processing application</title>
+<desc id="desc">User requests flow through API Gateway to a Lambda or ECS backend. Documents are stored in S3 and metadata in DynamoDB. A document-upload event passes from SNS to SQS to a Lambda worker that calls Bedrock. An AI agent accesses approved backend tools via AgentCore Gateway.</desc>
+<rect width="1200" height="740" rx="16" fill="#F8FAFC"/>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#64748B"/></marker>
+<style>
+text{font-family:Arial,Helvetica,sans-serif;fill:#1E293B}
+.h{font-size:27px;font-weight:700}.caption{font-size:14px;fill:#64748B}.label{font-size:16px;font-weight:700;text-anchor:middle}.detail{font-size:12px;fill:#64748B;text-anchor:middle}
+.card{fill:#fff;stroke:#CBD5E1;stroke-width:1.8}.compute{fill:#FFF4DF;stroke:#E2A44C;stroke-width:1.8}.data{fill:#EAF4FF;stroke:#84B4E8;stroke-width:1.8}.ai{fill:#F2EDFF;stroke:#A390DC;stroke-width:1.8}
+.path{fill:none;stroke:#64748B;stroke-width:2.5;marker-end:url(#arrow)}.section{font-size:12px;font-weight:700;letter-spacing:1.3px;fill:#64748B}
+</style>
+</defs>
+<text class="h" x="42" y="54">AI Document Processing on AWS</text>
+<text class="caption" x="42" y="81">Illustrative architecture · Services are selected according to workload needs</text>
+<text class="section" x="42" y="126">1. API &amp; STORAGE</text>
+<path class="path" d="M192 194 H238"/><path class="path" d="M408 194 H456"/>
+<path class="path" d="M665 178 H706 V153 H765"/><path class="path" d="M665 211 H706 V265 H765"/>
+<rect class="card" x="42" y="155" width="150" height="78" rx="11"/><text class="label" x="117" y="188">User</text><text class="detail" x="117" y="211">Web app</text>
+<rect class="compute" x="238" y="155" width="170" height="78" rx="11"/><text class="label" x="323" y="188">API Gateway</text><text class="detail" x="323" y="211">HTTP requests</text>
+<rect class="compute" x="456" y="155" width="209" height="78" rx="11"/><text class="label" x="560" y="188">Lambda / ECS</text><text class="detail" x="560" y="211">Backend API</text>
+<rect class="data" x="765" y="112" width="215" height="78" rx="11"/><text class="label" x="872" y="145">Amazon S3</text><text class="detail" x="872" y="168">Uploaded documents</text>
+<rect class="data" x="765" y="228" width="215" height="78" rx="11"/><text class="label" x="872" y="260">DynamoDB</text><text class="detail" x="872" y="283">Metadata &amp; status</text>
+<text class="section" x="42" y="351">2. BACKGROUND PROCESSING</text>
+<path class="path" d="M560 233 V325 H122 V393 H178"/>
+<path class="path" d="M348 431 H411"/><path class="path" d="M581 431 H644"/><path class="path" d="M825 431 H888"/>
+<rect class="compute" x="178" y="392" width="170" height="78" rx="11"/><text class="label" x="263" y="424">SNS</text><text class="detail" x="263" y="447">Upload event</text>
+<rect class="compute" x="411" y="392" width="170" height="78" rx="11"/><text class="label" x="496" y="424">SQS</text><text class="detail" x="496" y="447">Processing queue</text>
+<rect class="compute" x="644" y="392" width="181" height="78" rx="11"/><text class="label" x="734" y="424">Lambda Worker</text><text class="detail" x="734" y="447">Extracts text</text>
+<rect class="ai" x="888" y="392" width="221" height="78" rx="11"/><text class="label" x="998" y="424">Bedrock</text><text class="detail" x="998" y="447">Generates summary</text>
+<text class="section" x="42" y="536">3. AGENT TOOL ACCESS</text>
+<path class="path" d="M251 600 H329"/><path class="path" d="M558 600 H638"/>
+<rect class="ai" x="42" y="565" width="209" height="70" rx="11"/><text class="label" x="146" y="595">AI Agent</text><text class="detail" x="146" y="617">Requests a tool</text>
+<rect class="ai" x="329" y="565" width="229" height="70" rx="11"/><text class="label" x="443" y="594">AgentCore Gateway</text><text class="detail" x="443" y="616">Controls tool access</text>
+<rect class="card" x="638" y="565" width="263" height="70" rx="11"/><text class="label" x="769" y="595">Approved Backend Tools</text><text class="detail" x="769" y="617">e.g., metadata lookup</text>
+<text class="caption" x="42" y="697">Cross-cutting infrastructure: IAM · Secrets Manager · CloudWatch · AWS CDK</text>
+</svg>
